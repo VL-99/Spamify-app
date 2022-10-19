@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spamify</title>
+</head>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+
+<body style="background-color:#1AA7EC">
+    <div class="bckgimg">
+        <h1>Spamify</h1>
+    </div>
+
+    <nav class="navbar" style="background-color:#36454F">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/check">Check</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <h4>Enter Text Here</h4>
+        <form action="/final_result" method="post">
+            <input name="entry", type="text", class="form-control">
+            <input type="submit" class="btn btn-lg" style="background-color:grey" style="color:white" style=" margin-top:20px">
+        </form>
+    </div>
+    {% if data %}
+    {% for i in data %}
+
+        <div>
+            <h2>{{i}}</h2>
+        </div>
+
+    {% endfor %}
+    {% endif %}
+
+</body>
+</html>
